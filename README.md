@@ -10,6 +10,7 @@ snippets using python
 
  # 문자열 점검 : isalnum()
  # 모든 문자 소문자로 변경할 때 : lower() 
+ # 모든 문자 대문자로 변경할 때 : title()
  # 리스트의 경우 reverse() 사용 가능
 ```
 
@@ -26,6 +27,7 @@ strs.sort(key= lambda x: (x.split()[1:], x.split()[0]))
 >>> ['1,b','2,a']
 ```
 
+
 + 딕셔너리를 사용한 정렬 (5번)
 
 ```python 
@@ -40,6 +42,7 @@ return list(output.values())
 output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 # join(sorted(word)) 를 dictionary의 key로 사용
 # values() 사용시 모든 value 정렬
+# 
 
 ```
 
