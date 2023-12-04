@@ -95,3 +95,17 @@ count = collections.Counter(strs).most_common(1)[0][1]
 
 ```
 
++ enumerate()를 사용해서 인덱스와 값 동시에 사용하기 (7번)
+
+```python
+strs = ['a', 'b', 'c', 'd']
+
+for i, num in enumerate(strs):
+    print(i, num)
+
+>>> 0:a
+    1:b
+    2:c
+    3:d
+```
+
