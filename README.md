@@ -91,6 +91,7 @@ words = [(word for word in strs if word not in banned ) ]
 strs = ['apple', 'cat2', 'dog', 'apple', 'dog', 'apple']
 
 key = collections.Counter(strs).most_common(1)[0][0]
+
 count = collections.Counter(strs).most_common(1)[0][1]
 
 ```
