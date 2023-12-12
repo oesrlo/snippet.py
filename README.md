@@ -14,7 +14,7 @@ snippets using python
  # 리스트의 경우 reverse() 사용 가능
 ```
 
-+  각 단어를 알파벳순으로 정렬 (3번)
++  각 단어를 알파벳순으로 정렬  (3번)
 
  
 ```python
