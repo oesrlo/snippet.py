@@ -2,7 +2,7 @@
 snippets using python
 
 ## 파이썬 알고리즘 인터뷰 
-+ 문자열 뒤집기  (1번, 2번)
++ 문자열 뒤집기  ( 1번, 2번)
 
 ```python
  strs=[]
@@ -14,7 +14,7 @@ snippets using python
  # 리스트의 경우 reverse() 사용 가능
 ```
 
-+  각 단어를 알파벳순으로 정렬  (3번)
++  각 단어를 알파벳순으로 정렬  ( 3번 )
 
  
 ```python
@@ -28,7 +28,7 @@ strs.sort(key= lambda x: (x.split()[1:], x.split()[0]))
 ```
 
 
-+ 딕셔너리를 사용한 정렬 (5번)
++ 딕셔너리를 사용한 정렬 ( 5번 )
 
 ```python 
 Input: strs = ["eat","tea","tan","ate","nat","bat"]
@@ -68,8 +68,6 @@ for s in strs:
 
 # 영문자, 숫자 여부 판단 
 ```
-
-
 
 
 + 리스트에서 특정 요소 골라내기 (4번)
