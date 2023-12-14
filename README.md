@@ -48,7 +48,7 @@ output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
 
 
-+ 리스트에서 문자만 골라내기 (4번)
++ 리스트에서 문자만 골라내기 ( 4번 )
 
 ```python
 strs = [ 'A man, a plan, a canal: Panama']
@@ -70,7 +70,7 @@ for s in strs:
 ```
 
 
-+ 리스트에서 특정 요소 골라내기 (4번)
++ 리스트에서 특정 요소 골라내기 ( 4번 )
 
 ```python
 strs = ['apple', 'cat2', 'dog', 'apple', 'dog', 'apple']
@@ -83,7 +83,7 @@ words = [(word for word in strs if word not in banned ) ]
 ```
 
 
-+ 리스트에서 각 요소별 빈도수 찾기 (4번)
++ 리스트에서 각 요소별 빈도수 찾기 ( 4번 )
 
 ```python
 strs = ['apple', 'cat2', 'dog', 'apple', 'dog', 'apple']
@@ -94,7 +94,7 @@ count = collections.Counter(strs).most_common(1)[0][1]
 
 ```
 
-+ enumerate()를 사용해서 인덱스와 값 동시에 사용하기 (7번)
++ enumerate()를 사용해서 인덱스와 값 동시에 사용하기 ( 7번 )
 
 ```python
 strs = ['a', 'b', 'c', 'd']
