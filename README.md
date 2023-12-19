@@ -108,3 +108,19 @@ for i, num in enumerate(strs):
     3:d
 ```
 
++ 리스트 요소 반복 횟수
+
+```python
+
+my_list = ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd', 'd', 'd'] 
+count = Counter(my_list) # Counter 객체 생성 
+
+print(count) # 모든 엘리멘트의 반복 횟수 
+# Counter({'d': 5, 'b': 3, 'a': 2, 'c': 1}) 
+print(count['b']) # 특정 엘리멘트의 갯수 
+# 3 
+print(count.most_common(1)) # 가장 많이 반복되는 것 1위 
+# [('d', 5)]
+
+```
+
