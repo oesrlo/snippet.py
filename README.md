@@ -124,3 +124,17 @@ print(count.most_common(1)) # 가장 많이 반복되는 것 1위
 
 ```
 
++ 리스트 중복 제거
+
+```python
+a = [3, 1, 5, 8, 5, 10, 7, 1]
+
+c = sorted(list(set(a)))
+ # [1, 3, 5, 7, 8, 10]
+d = sorted(list(set(a)), reverse=True)
+ # [10, 8, 7, 5, 3, 1]
+
+# set 으로 변경해서 다시 list로 변경하면 중복 제거됨, reverse 로 내림차순으로 변경 가능
+
+```
+
