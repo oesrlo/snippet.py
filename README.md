@@ -61,6 +61,7 @@ words = [word for word in re.sub(r'[^\W]', ' ',  strs) ]
 
 ```
 ```python
+
 strs = 'A man, a plan, a canal: Panama'
 for s in strs:
     if s.isalnum():
