@@ -12,6 +12,7 @@ snippets using python
  # 모든 문자 소문자로 변경할 때 : lower() 
  # 모든 문자 대문자로 변경할 때 : title()
  # 리스트의 경우 reverse() 사용 가능
+ # 슬라이싱에서 [:: n] 이면 n 만큼 건너뜀
 ```
 
 +  각 단어를 알파벳순으로 정렬  ( 3번 )
@@ -138,6 +139,19 @@ d = sorted(list(set(a)), reverse=True)
  # [10, 8, 7, 5, 3, 1]
 
 # set 으로 변경해서 다시 list로 변경하면 중복 제거됨, reverse 로 내림차순으로 변경 가능
+
+```
+
++ range() 함수 사용한 범위 지정
+```python
+
+for num in range(10, 21, 5):
+    # 10,15,20
+    
+for num in range(21, 10, -5):
+    # 21,16,11
+
+#range(시작, 종료, 증분)
 
 ```
 
