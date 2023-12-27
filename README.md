@@ -155,3 +155,14 @@ for num in range(21, 10, -5):
 
 ```
 
++ 최댓값, 최솟값 지정
+
+```python
+
+max = -sys.maxsize 
+min = sys.maxsize
+
+# 최댓값의 경우 가장 낮은 값을 초기값으로 설정해 계속 갱신될 수 있도록 함
+# 최솟값의 경우 반대
+```
+
