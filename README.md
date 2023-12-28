@@ -166,3 +166,41 @@ min = sys.maxsize
 # 최솟값의 경우 반대
 ```
 
++ 연결리스트 뒤집기
+
+```python
+
+   node, prev = head, None
+   # prev= None 도 가능
+        while node:
+            next, node.next = node.next, prev
+            prev, node. next= node.next, next 
+        return prev
+
+
+```
++ 연결리스트 -> 리스트
+
+```python
+
+list: List = []
+while node:
+    list.append(node.val)
+    node = node.next
+return list
+
+```
+
++ 리스트 -> 연결리스트
+
+```python
+def listToNode(list):
+    head = None
+    while list:
+        head = ListNode(list.pop(), head)
+        # head 값을 갱신 
+    return head
+
+```
+
+
