@@ -194,6 +194,7 @@ return list
 + 리스트 -> 연결리스트
 
 ```python
+
 def listToNode(list):
     head = None
     while list:
