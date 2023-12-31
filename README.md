@@ -119,8 +119,10 @@ count = Counter(my_list) # Counter 객체 생성
 
 print(count) # 모든 엘리멘트의 반복 횟수 
 # Counter({'d': 5, 'b': 3, 'a': 2, 'c': 1}) 
+
 print(count['b']) # 특정 엘리멘트의 갯수 
 # 3 
+
 print(count.most_common(1)) # 가장 많이 반복되는 것 1위 
 # [('d', 5)]
 
@@ -172,6 +174,7 @@ min = sys.maxsize
 
    node, prev = head, None
    # prev= None 도 가능
+
         while node:
             next, node.next = node.next, prev
             prev, node. next= node.next, next 
