@@ -41,6 +41,7 @@ for word in strs:
 return list(output.values())
 
 output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
 # join(sorted(word)) 를 dictionary의 key로 사용
 # values() 사용시 모든 value 정렬
 # 
