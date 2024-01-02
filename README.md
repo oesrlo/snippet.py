@@ -44,7 +44,6 @@ output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
 # join(sorted(word)) 를 dictionary의 key로 사용
 # values() 사용시 모든 value 정렬
-# 
 
 ```
 
@@ -58,10 +57,10 @@ strs = [ 'A man, a plan, a canal: Panama']
 words = [word for word in re.sub(r'[^\W]', ' ',  strs) ]
 
 >>> 'A man  a plan  a canal  Panama'
-
 # 문자열의 '숫자', '.' 등을 공백으로 변경
 
 ```
+
 ```python
 
 strs = 'A man, a plan, a canal: Panama'
@@ -116,7 +115,8 @@ for i, num in enumerate(strs):
 ```python
 
 my_list = ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd', 'd', 'd'] 
-count = Counter(my_list) # Counter 객체 생성 
+count = Counter(my_list) 
+# Counter 객체 생성 
 
 print(count) # 모든 엘리멘트의 반복 횟수 
 # Counter({'d': 5, 'b': 3, 'a': 2, 'c': 1}) 
