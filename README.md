@@ -140,7 +140,6 @@ c = sorted(list(set(a)))
  
 d = sorted(list(set(a)), reverse=True)
  # [10, 8, 7, 5, 3, 1]
-
 # set 으로 변경해서 다시 list로 변경하면 중복 제거됨, reverse 로 내림차순으로 변경 가능
 
 ```
@@ -204,6 +203,7 @@ def listToNode(list):
     while list:
         head = ListNode(list.pop(), head)
         # head 값을 갱신 
+        
     return head
 
 ```
