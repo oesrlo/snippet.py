@@ -129,7 +129,7 @@ print(count.most_common(1)) # 가장 많이 반복되는 것 1위
 
 ```
 
-+ 리스트 중복 제거
++ 리스트 중복 제거, 리스트 정렬
 
 ```python
 
@@ -143,6 +143,24 @@ d = sorted(list(set(a)), reverse=True)
 # set 으로 변경해서 다시 list로 변경하면 중복 제거됨, reverse 로 내림차순으로 변경 가능
 
 ```
+
++ 리스트 정렬 ( 힙큐 )
+
+```python
+
+pq = []
+heapq.heappush(pq, 1)
+heapq.heappush(pq, 3)
+heapq.heappush(pq, 2)
+
+heapq.heappop(pq) # 1
+heapq.heappop(pq) # 2
+heapq.heappop(pq) # 3
+ # 리스트에 원소를 넣는 순간 정렬되므로 sort()보다 빠름
+
+```
+
+
 
 + range() 함수 사용한 범위 지정
 ```python
@@ -199,13 +217,27 @@ return list
 ```python
 
 def listToNode(list):
+
     head = None
     while list:
         head = ListNode(list.pop(), head)
         # head 값을 갱신 
-        
+
     return head
 
 ```
 
+
++ 연결리스트의 루트만 (0번째 인덱스) -> 힙 ( 힙큐 )
+
+```python
+
+heap = []
+
+for i in range(len(lists)):
+    if lists[i]:
+        heapq.heappush(heap, (lists[i].val, i, lists[i]))
+
+
+```
 
