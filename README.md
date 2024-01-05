@@ -144,7 +144,7 @@ d = sorted(list(set(a)), reverse=True)
 
 ```
 
-+ 리스트 정렬 ( 힙큐 )
++ 리스트 정렬 ( 힙큐 )   --> 최소, 최대, n번 째로 큰 수 반환 등에 사용
 
 ```python
 
@@ -241,3 +241,22 @@ for i in range(len(lists)):
 
 ```
 
+
++ 데크(deque)   --> 양쪽 방향에서 엘리먼트 추가, 제거에 유용
+
+deq = deque([1, 2, 3, 4, 5])
+
+deque.append(6)
+# deque([1,2,3,4,5,6])
+
+deque.appendleft(6)
+# deque([6,1,2,3,4,5])
+
+deq.rotate(1)
+# deque([5, 1, 2, 3, 4])
+
+deque.remove(3)
+# deque([1,2,4,5])
+
+deq.rotate(-1)
+# deque([1, 2, 3, 4, 5])
