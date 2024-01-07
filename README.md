@@ -115,6 +115,7 @@ for i, num in enumerate(strs):
 ```python
 
 my_list = ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd', 'd', 'd'] 
+
 count = Counter(my_list) 
 # Counter 객체 생성 
 
@@ -125,9 +126,30 @@ print(count['b']) # 특정 엘리멘트의 갯수
 # 3 
 
 print(count.most_common(1)) # 가장 많이 반복되는 것 1위 
+print(count.most_common(n=1))
 # [('d', 5)]
 
 ```
++ 리스트 컴프리헨션
+
+```python
+
+S = ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd']
+J = ['a', 'c']
+    s for s in S
+    # ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd']
+
+
+    s in J for s in S
+    # [true, true, false, false, false, true, false, false, false,]
+
+    sum(s in J for s in S)
+    # 3
+    # 카운터와 비슷함
+
+```
+
+
 
 + 리스트 중복 제거, 리스트 정렬
 
