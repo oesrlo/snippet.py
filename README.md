@@ -15,6 +15,17 @@ snippets using python
  # 슬라이싱에서 [:: n] 이면 n 만큼 건너뜀
 ```
 
++ 인덱스,원소 출력
+```python
+ for index, val in enumerate(['A', 'B', 'C']):
+    print(index, val)
+
+>>> (0, 'A')
+    (1, 'B')
+    (2, 'C')
+
+```
+
 +  각 단어를 알파벳순으로 정렬  ( 3번 )
 
  
@@ -264,8 +275,10 @@ for i in range(len(lists)):
 ```
 
 
-+ 데크(deque)   --> 양쪽 방향에서 엘리먼트 추가, 제거에 유용
++ 데크(deque)
+   --> 양쪽 방향에서 엘리먼트 추가, 제거에 유용
 
+```python
 deq = deque([1, 2, 3, 4, 5])
 
 deque.append(6)
@@ -282,3 +295,4 @@ deque.remove(3)
 
 deq.rotate(-1)
 # deque([1, 2, 3, 4, 5])
+```
