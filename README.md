@@ -196,6 +196,7 @@ heapq.heappop(pq) # 3
 
 
 + range() 함수 사용한 범위 지정
+
 ```python
 
 for num in range(10, 21, 5):
@@ -295,4 +296,5 @@ deque.remove(3)
 
 deq.rotate(-1)
 # deque([1, 2, 3, 4, 5])
+
 ```
