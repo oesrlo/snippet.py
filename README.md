@@ -17,12 +17,26 @@ snippets using python
 
 + 인덱스,원소 출력
 ```python
- for index, val in enumerate(['A', 'B', 'C']):
-    print(index, val)
+    s = ['A', 'B', 'C']
+    char = 'A'
 
+ for idx, val in enumerate(s):
+    print(idx, val)
+    
 >>> (0, 'A')
     (1, 'B')
     (2, 'C')
+
+for idx, val i enumeratr(s, 5)
+    print(idx, val)
+
+>>> (5, A)
+    (6, B)
+    (7, C)
+
+
+
+
 
 ```
 
@@ -192,7 +206,30 @@ heapq.heappop(pq) # 3
  # 리스트에 원소를 넣는 순간 정렬되므로 sort()보다 빠름
 
 ```
++ zip() 함수로 데이터 변경
 
+```python
+
+numbers = [1, 2, 3]
+letters = ["A", "B", "C"]
+
+for pair in zip(numbers, letters):
+    print(pair)
+
+>>> (1, 'A')
+    (2, 'B')
+    (3, 'C')
+# 리스트로 변환 가능 : list_pair = list(pair)
+# >>> [(1, 'A'), (2, 'B'), (3, 'C')]
+
+# dic 로 변환
+
+keys = [1, 2, 3]
+values = ["A", "B", "C"]
+dict(zip(keys, values))
+>>> {1: 'A', 2: 'B', 3: 'C'}
+
+```
 
 
 + range() 함수 사용한 범위 지정
