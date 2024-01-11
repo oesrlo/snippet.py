@@ -27,7 +27,7 @@ snippets using python
     (1, 'B')
     (2, 'C')
 
-for idx, val i enumeratr(s, 5)
+for idx, val in enumeratr(s, 5)
     print(idx, val)
 
 >>> (5, A)
@@ -229,6 +229,27 @@ values = ["A", "B", "C"]
 dict(zip(keys, values))
 >>> {1: 'A', 2: 'B', 3: 'C'}
 
+```
+
++ 가변인자, 데이터 Unpacking ( Asterisk 사용 )
+
+```python
+
+primes = [2, 3, 5, 7, 11, 13]
+
+def product(*numbers):
+    p = reduce(lambda x, y: x * y, numbers)
+    return p
+
+print(*primes)
+>>> 1234
+
+product(*primes)
+# *primes 의 경우 primes 리스트 안의 값 인식
+# 30030
+
+product(primes)
+# [2, 3, 5, 7, 11, 13]
 ```
 
 
