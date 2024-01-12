@@ -51,6 +51,7 @@ strs.sort(key= lambda x: (x.split()[1:], x.split()[0]))
 
 # sorted(strs) 의 경우
 >>> ['1,b','2,a']
+
 ```
 
 
