@@ -59,6 +59,7 @@ strs.sort(key= lambda x: (x.split()[1:], x.split()[0]))
 + 딕셔너리를 사용한 정렬 ( 5번 )
 
 ```python 
+
 Input: strs = ["eat","tea","tan","ate","nat","bat"]
 
 output=collection.defaultdict(list)
@@ -79,6 +80,7 @@ output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 + 리스트에서 문자만 골라내기 ( 4번 )
 
 ```python
+
 strs = [ 'A man, a plan, a canal: Panama']
 
 words = [word for word in re.sub(r'[^\W]', ' ',  strs) ]
@@ -102,6 +104,7 @@ for s in strs:
 + 리스트에서 특정 요소 골라내기 ( 4번 )
 
 ```python
+
 strs = ['apple', 'cat2', 'dog', 'apple', 'dog', 'apple']
 banned = ['dog']
 
