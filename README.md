@@ -118,10 +118,10 @@ words = [(word for word in strs if word not in banned ) ]
 + 리스트에서 각 요소별 빈도수 찾기 ( 4번 )
 
 ```python
+
 strs = ['apple', 'cat2', 'dog', 'apple', 'dog', 'apple']
 
 key = collections.Counter(strs).most_common(1)[0][0]
-
 count = collections.Counter(strs).most_common(1)[0][1]
 
 ```
