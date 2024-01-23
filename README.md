@@ -297,7 +297,7 @@ min = sys.maxsize
 
 
 ```
-+ 연결리스트 -> 리스트
++ 연결리스트 -> 리스트 
 
 ```python
 
@@ -338,8 +338,7 @@ for i in range(len(lists)):
 
 ```
 
-
-+ 데크(deque)
+  + 데크(deque)
    --> 양쪽 방향에서 엘리먼트 추가, 제거에 유용
 
 ```python
@@ -351,24 +350,38 @@ deque.append(6)
 deque.appendleft(6)
 # deque([6,1,2,3,4,5])
 
+
+deque.extend('6','7','8')
+# deque([1,2,3,4,5,6,7,8])
+
+deque.extendleft('0')
+# deque([0,1,2,3,4,5,6])
+
 deq.rotate(1)
 # deque([5, 1, 2, 3, 4])
 
 deque.remove(3)
 # deque([1,2,4,5])
 
+deque.insert(0,'9')
+# deque([9,2,4,5])
+
 deq.rotate(-1)
 # deque([1, 2, 3, 4, 5])
 
 ```
-+ DFS
-    --> 깊이 우선 탐색
+
+## DFS
+ 깊이 우선 탐색
  "앞으로 찾아야 가야할 노드"(계속 검색)와 "이미 방문한 노드"(무시, 따로 저장)를 기준으로 데이터를 탐색
 
+
+
++ deque 사용할 경우
 ```python
 
+
 def dfs2(graph, start_node):
-    ## deque 패키지 불러오기
     from collections import deque
     visited = []
     need_visited = deque()
@@ -390,5 +403,22 @@ def dfs2(graph, start_node):
             need_visited.extend(graph[node])
                 
     return visited
+# >>> A, C, I, J, H, G, B, D, F, E ( 그래프 기준 오른쪽부터)
+```
+    
++ 재귀함수 사용할 경우
+```python
+
+def dfs_recursive(graph, start, visited = []):
+# 데이터를 추가하는 명령어 / 재귀가 이루어짐 
+    visited.append(start)
+ 
+    for node in graph[start]:
+        if node not in visited:
+            dfs_recursive(graph, node, visited)
+    return visited
+
+# >>> A, B, D, E, F, C, G, H, I, J (그래프 기준 왼쪽부터)
+
 
 ```
