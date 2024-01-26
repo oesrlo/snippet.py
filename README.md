@@ -294,9 +294,9 @@ min = sys.maxsize
             next, node.next = node.next, prev
             prev, node. next= node.next, next 
         return prev
-
-
 ```
+---
+
 + 연결리스트 -> 리스트 
 
 ```python
