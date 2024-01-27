@@ -286,10 +286,8 @@ min = sys.maxsize
 + 연결리스트 뒤집기
 
 ```python
-
    node, prev = head, None
    # prev= None 도 가능
-
         while node:
             next, node.next = node.next, prev
             prev, node. next= node.next, next 
@@ -300,7 +298,6 @@ min = sys.maxsize
 + 연결리스트 -> 리스트 
 
 ```python
-
 list: List = []
 while node:
     list.append(node.val)
