@@ -282,7 +282,106 @@ min = sys.maxsize
 # 최댓값의 경우 가장 낮은 값을 초기값으로 설정해 계속 갱신될 수 있도록 함
 # 최솟값의 경우 반대
 ```
++ 순열, 조합 : itertools 사용
 
+```python
+from itertools import combinations
+
+num = [1,2,3]
+
+1. iterable 에서 원소 개수가 r개인 조합 뽑기
+
+for i in combinations(num, 2):
+    print(i)
+
+>>> (1, 2)
+    (1, 3)
+    (2, 3)
+    ...
+
+# 범위를 지정할 경우(1-n 까지 k 개)
+return list(itertools.combinations(range(1,n+1), k))
+
+1.1 중복 조합인 경우
+
+for i in combination_with_repalcement(1,2):
+    print(i)
+
+>>> ('A', 'A')
+    ('A', 'B')
+    ('A', 'C')
+    ('B', 'B')
+    ('B', 'C')
+    ('C', 'C')
+
+2. iterable에서 원소 개수가 r개인 순열 뽑기
+
+letter = ['A', 'B', 'C']
+# itertools.permutations(letter)
+for i in permutations(letter):
+	print(i)
+
+>>> ('A', 'B', 'C')
+    ('A', 'C', 'B')
+    ('B', 'A', 'C')
+    ('B', 'C', 'A')
+    ('C', 'A', 'B')
+    ('C', 'B', 'A')
+# r을 지정하지 않거나 r=None으로 하면 최대 길이의 순열이 리턴
+
+3. 여러 iterable의 데카르트곱 리턴
+
+l1 = ['A', 'B']
+l2 = ['1', '2']
+
+for i in product(l1,l2,repeat=1): 
+	print(i)
+#l1과 l2의 모든 쌍을 지어 리턴한다
+
+'''
+출력결과:
+('A', '1')
+('A', '2')
+('B', '1')
+('B', '2')
+'''
+
+for i in product(l1,repeat=3):
+	print(i)
+ #product(l1,l1,l1,repeat=1)과 동일한 출력
+
+'''
+출력결과:
+('A', 'A', 'A')
+('A', 'A', 'B')
+('A', 'B', 'A')
+('A', 'B', 'B')
+('B', 'A', 'A')
+('B', 'A', 'B')
+('B', 'B', 'A')
+('B', 'B', 'B')
+```
++ 튜플 -> 리스트
+
+```python
+my_tuple = (1, 2, 3, 4, 5)
+
+my_list = list(my_tuple)    // 방법1
+my_list = [*my_tuple]       // 방법2
+my_list = [x for x in my_tuple] // 방법3
+
+
+
+```
+
+
+
+
+
+
+
+
+---
 + 연결리스트 뒤집기
 
 ```python
