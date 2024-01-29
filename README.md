@@ -282,6 +282,18 @@ min = sys.maxsize
 # 최댓값의 경우 가장 낮은 값을 초기값으로 설정해 계속 갱신될 수 있도록 함
 # 최솟값의 경우 반대
 ```
++ 반복자 : itertools 사용
+
+```python
+
+n = [1, 2, 3]
+
+    1. times 만큼 반복해  리스트를 연결(chain)
+print(list(chain.from_iterable(repeat(n, 3))))
+>>> [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+```
+
 + 순열, 조합 : itertools 사용
 
 ```python
