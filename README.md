@@ -239,7 +239,6 @@ dict(zip(keys, values))
 + 가변인자, 데이터 Unpacking ( Asterisk 사용 )
 
 ```python
-
 primes = [2, 3, 5, 7, 11, 13]
 
 def product(*numbers):
@@ -261,7 +260,6 @@ product(primes)
 + range() 함수 사용한 범위 지정
 
 ```python
-
 for num in range(10, 21, 5):
     # 10,15,20
     
@@ -275,7 +273,6 @@ for num in range(21, 10, -5):
 + 최댓값, 최솟값 지정
 
 ```python
-
 max = -sys.maxsize 
 min = sys.maxsize
 
@@ -285,7 +282,6 @@ min = sys.maxsize
 + 반복자 : itertools 사용
 
 ```python
-
 n = [1, 2, 3]
 
     1. times 만큼 반복해  리스트를 연결(chain)
@@ -420,7 +416,6 @@ return list
 + 리스트 -> 연결리스트
 
 ```python
-
 def listToNode(list):
 
     head = None
@@ -436,7 +431,6 @@ def listToNode(list):
 + 연결리스트의 루트만 (0번째 인덱스) -> 힙 ( 힙큐 )
 
 ```python
-
 heap = []
 
 for i in range(len(lists)):
