@@ -214,7 +214,6 @@ heapq.heappop(pq) # 3
 + zip() 함수로 데이터 변경
 
 ```python
-
 numbers = [1, 2, 3]
 letters = ["A", "B", "C"]
 
