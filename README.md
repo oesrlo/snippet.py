@@ -415,6 +415,7 @@ return list
 + 리스트 -> 연결리스트
 
 ```python
+1.
 def listToNode(list):
 
     head = None
@@ -423,6 +424,15 @@ def listToNode(list):
         # head 값을 갱신 
 
     return head
+
+2. 
+    node = head
+    for i in range(len(list)):
+        node.val = list[i]
+        node = node.next
+    return head
+
+
 
 ```
 
@@ -439,7 +449,24 @@ for i in range(len(lists)):
 
 ```
 
-  + 데크(deque)
++ 연결리스트(크기 불명) 중간 노드 찾기 --> 런너 기법
+
+```python
+half, slow, fast = None, head, head
+while fast and fast.next:
+    half, slow, fast = slow, slow.next, fast.next.next
+half.next = None     # half 위치 기준으로 연결리스트 관계 중단
+
+# 0-half | slow-0-fast 순으로 분할
+# fast는 2씩 이동, slow 는 1씩 이동, half 는 slow 이전
+
+```
+
+
+
+
+
++ 데크(deque)
    --> 양쪽 방향에서 엘리먼트 추가, 제거에 유용
 
 ```python
