@@ -383,11 +383,6 @@ my_list = [x for x in my_tuple] // 방법3
 
 
 
-
-
-
-
-
 ---
 + 연결리스트 뒤집기
 
@@ -431,11 +426,7 @@ def listToNode(list):
         node.val = list[i]
         node = node.next
     return head
-
-
-
 ```
-
 
 + 연결리스트의 루트만 (0번째 인덱스) -> 힙 ( 힙큐 )
 
