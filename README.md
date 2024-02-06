@@ -195,7 +195,6 @@ d = sorted(list(set(a)), reverse=True)
 # set 으로 변경해서 다시 list로 변경하면 중복 제거됨, reverse 로 내림차순으로 변경 가능
 
 ```
-
 + 리스트 정렬 ( 힙큐 )   --> 최소, 최대, n번 째로 큰 수 반환 등에 사용
 
 ```python
@@ -227,12 +226,10 @@ for pair in zip(numbers, letters):
 # >>> [(1, 'A'), (2, 'B'), (3, 'C')]
 
 # dic 로 변환
-
 keys = [1, 2, 3]
 values = ["A", "B", "C"]
 dict(zip(keys, values))
 >>> {1: 'A', 2: 'B', 3: 'C'}
-
 ```
 
 + 가변인자, 데이터 Unpacking ( Asterisk 사용 )
@@ -294,10 +291,9 @@ print(list(chain.from_iterable(repeat(n, 3))))
 ```python
 from itertools import combinations
 
-num = [1,2,3]
-
 1. iterable 에서 원소 개수가 r개인 조합 뽑기
 
+num = [1,2,3]
 for i in combinations(num, 2):
     print(i)
 
