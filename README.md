@@ -104,7 +104,6 @@ for s in strs:
 + 리스트에서 특정 요소 골라내기 ( 4번 )
 
 ```python
-
 strs = ['apple', 'cat2', 'dog', 'apple', 'dog', 'apple']
 banned = ['dog']
 
@@ -118,7 +117,6 @@ words = [(word for word in strs if word not in banned ) ]
 + 리스트에서 각 요소별 빈도수 찾기 ( 4번 )
 
 ```python
-
 strs = ['apple', 'cat2', 'dog', 'apple', 'dog', 'apple']
 
 key = collections.Counter(strs).most_common(1)[0][0]
@@ -143,7 +141,6 @@ for i, num in enumerate(strs):
 + 리스트 요소 반복 횟수
 
 ```python
-
 my_list = ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd', 'd', 'd'] 
 
 count = Counter(my_list) 
@@ -169,7 +166,6 @@ J = ['a', 'c']
     s for s in S
     # ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd']
 
-
     s in J for s in S
     # [true, true, false, false, false, true, false, false, false,]
 
@@ -185,7 +181,6 @@ J = ['a', 'c']
 
 ```python
 a = [3, 1, 5, 8, 5, 10, 7, 1]
-
 c = sorted(list(set(a)))
  # [1, 3, 5, 7, 8, 10]
  
