@@ -44,7 +44,6 @@ for idx, val in enumeratr(s, 5)
 
  
 ```python
-
 strs= ['2,a','1,b']
 strs.sort(key= lambda x: (x.split()[1:], x.split()[0]))
 
