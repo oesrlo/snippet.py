@@ -16,6 +16,7 @@ snippets using python
 ```
 
 + 인덱스,원소 출력
+
 ```python
     s = ['A', 'B', 'C']
     char = 'A'
