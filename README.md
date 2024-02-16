@@ -47,6 +47,7 @@ for idx, val in enumeratr(s, 5)
 ```python
 strs= ['2,a','1,b']
 strs.sort(key= lambda x: (x.split()[1:], x.split()[0]))
+# lambda 인자: 표현식
 
 >>> ['2,a','1,b']
 
@@ -201,48 +202,6 @@ heapq.heappop(pq) # 3
  # 리스트에 원소를 넣는 순간 정렬되므로 sort()보다 빠름
 
 ```
-+ zip() 함수로 데이터 변경
-
-```python
-numbers = [1, 2, 3]
-letters = ["A", "B", "C"]
-
-for pair in zip(numbers, letters):
-    print(pair)
-
->>> (1, 'A')
-    (2, 'B')
-    (3, 'C')
-# 리스트로 변환 가능 : list_pair = list(pair)
-# >>> [(1, 'A'), (2, 'B'), (3, 'C')]
-
-# dic 로 변환
-keys = [1, 2, 3]
-values = ["A", "B", "C"]
-dict(zip(keys, values))
->>> {1: 'A', 2: 'B', 3: 'C'}
-```
-
-+ 가변인자, 데이터 Unpacking ( Asterisk 사용 )
-
-```python
-primes = [2, 3, 5, 7, 11, 13]
-
-def product(*numbers):
-    p = reduce(lambda x, y: x * y, numbers)
-    return p
-
-print(*primes)
->>> 1234
-
-product(*primes)
-# *primes 의 경우 primes 리스트 안의 값 인식
-# 30030
-
-product(primes)
-# [2, 3, 5, 7, 11, 13]
-```
-
 
 + range() 함수 사용한 범위 지정
 
@@ -355,6 +314,79 @@ for i in product(l1,repeat=3):
 ('B', 'B', 'A')
 ('B', 'B', 'B')
 ```
+
++ 연결리스트 뒤집기
+
+```python
+   node, prev = head, None
+   # prev= None 도 가능
+        while node:
+            next, node.next = node.next, prev
+            prev, node. next= node.next, next 
+        return prev
+```
+---
+### 데이터 타입 변환
+
++ zip() 함수로 데이터 변경
+
+```python
+numbers = [1, 2, 3]
+letters = ["A", "B", "C"]
+
+for pair in zip(numbers, letters):
+    print(pair)
+
+>>> (1, 'A')
+    (2, 'B')
+    (3, 'C')
+
+1. 리스트로 변환 가능
+list_pair = list(pair)
+>>> [(1, 'A'), (2, 'B'), (3, 'C')]
+
+2. dic 로 변환
+keys = [1, 2, 3]
+values = ["A", "B", "C"]
+dict(zip(keys, values))
+>>> {1: 'A', 2: 'B', 3: 'C'}
+```
+
++ key 매개변수
+
+```python
+list_pair = [('바나나', 2),('사과', 5),('당근', 3)]
+
+def setting(data) :
+    return data[1]
+
+result = sorted(list_pair, key = setting)
+# result = sorted(list_pair, key = lambda x: x[1]) 로도 가능 : 람다 사용
+>>> [('바나나', 2), ('당근', 3), ('사과', 5)]
+
+```
+
++ 가변인자, 데이터 Unpacking ( Asterisk 사용 )
+
+```python
+primes = [2, 3, 5, 7, 11, 13]
+
+def product(*numbers):
+    p = reduce(lambda x, y: x * y, numbers)
+    return p
+
+print(*primes)
+>>> 1234
+
+product(*primes)
+# *primes 의 경우 primes 리스트 안의 값 인식
+# 30030
+
+product(primes)
+# [2, 3, 5, 7, 11, 13]
+```
+
+
 + 튜플 -> 리스트
 
 ```python
@@ -367,21 +399,6 @@ my_list = [x for x in my_tuple] // 방법3
 
 
 ```
-
-
-
----
-+ 연결리스트 뒤집기
-
-```python
-   node, prev = head, None
-   # prev= None 도 가능
-        while node:
-            next, node.next = node.next, prev
-            prev, node. next= node.next, next 
-        return prev
-```
----
 
 + 연결리스트 -> 리스트 
 
@@ -476,12 +493,54 @@ deq.rotate(-1)
 # deque([1, 2, 3, 4, 5])
 
 ```
+---
+### 람다함수 활용
 
-## DFS
+1. map()
+
+```python
+mylist = [1, 2, 3, 4, 5]
+mylist2 = list(map(lambda x: x * 2, mylist))
+>>> [2, 4, 6, 8, 10]
+```
+
+2. filter()
+```python
+mylist = [1, 2, 3, 4, 5]
+mylist2 = list(filter(lambda x: x % 2 == 1, mylist))
+>>> [1, 3, 5]
+```
+
+3. sorted()
+```python
+mylist = ['apple', 'banana', 'cherry']
+mylist2 = sorted(mylist, key=lambda x: len(x))
+>>> ['apple', 'cherry', 'banana']
+```
+4. key = lambda
++ sorted()의 인자로 사용됨
+
+```python
+1. key 하나일 때
+
+b = [12, 14, 23, 24, 16]
+b_idx = sorted(range(len(b)), key = lambda k: b[k])
+>>> b_idx = [0, 1, 4, 2, 3]
+
+2. key 여러개일 때
+
+arr = ['abb', 'acc', 'bcd']
+sorted(arr, key=lambda x : (-x[0], x[1]))
+
+
+
+```
+
+---
+### DFS
+
  깊이 우선 탐색
  "앞으로 찾아야 가야할 노드"(계속 검색)와 "이미 방문한 노드"(무시, 따로 저장)를 기준으로 데이터를 탐색
-
-
 
 + deque 사용할 경우
 ```python
