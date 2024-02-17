@@ -518,6 +518,7 @@ mylist2 = sorted(mylist, key=lambda x: len(x))
 >>> ['apple', 'cherry', 'banana']
 ```
 4. key = lambda
+
 + sorted()의 인자로 사용됨
 
 ```python
@@ -526,15 +527,20 @@ mylist2 = sorted(mylist, key=lambda x: len(x))
 b = [12, 14, 23, 24, 16]
 b_idx = sorted(range(len(b)), key = lambda k: b[k])
 >>> b_idx = [0, 1, 4, 2, 3]
+```
 
+```python
 2. key 여러개일 때
 
+# 1. x[0]을 기준으로 정렬, 같을 경우 x[1] 기준으로 정렬
 arr = ['abb', 'acc', 'bcd']
 sorted(arr, key=lambda x : (-x[0], x[1]))
 
-
-
+# 2. x[0]는 내림차순 정렬, x[1]는 오름차순 기준으로 정렬
+arr = ['abb', 'acc', 'bcd']
+sorted(arr, key=lambda x : (-x[0], x[1]))
 ```
+
 
 ---
 ### DFS
