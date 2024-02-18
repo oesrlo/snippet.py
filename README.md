@@ -530,7 +530,7 @@ b_idx = sorted(range(len(b)), key = lambda k: b[k])
 ```
 
 ```python
-2. key 여러개일 때
+2. key 여러개일 때 (다중 조건 정렬)
 
 # 1. x[0]을 기준으로 정렬, 같을 경우 x[1] 기준으로 정렬
 arr = ['abb', 'acc', 'bcd']
