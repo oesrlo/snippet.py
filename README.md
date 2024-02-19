@@ -551,7 +551,6 @@ sorted(arr, key=lambda x : (-x[0], x[1]))
 + deque 사용할 경우
 ```python
 
-
 def dfs2(graph, start_node):
     from collections import deque
     visited = []
