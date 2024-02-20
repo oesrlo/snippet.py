@@ -497,7 +497,6 @@ deq.rotate(-1)
 ### 람다함수 활용
 
 1. map()
-
 ```python
 mylist = [1, 2, 3, 4, 5]
 mylist2 = list(map(lambda x: x * 2, mylist))
