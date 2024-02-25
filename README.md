@@ -415,6 +415,7 @@ return list
 
 ```python
 1.
+
 def listToNode(list):
 
     head = None
