@@ -5,6 +5,7 @@ snippets using python
 + 문자열 뒤집기  ( 1번, 2번)
 
 ```python
+
  strs=[]
  reversed_strs == strs[::-1]
 
@@ -20,6 +21,7 @@ snippets using python
 ```python
     s = ['A', 'B', 'C']
     char = 'A'
+
 
  for idx, val in enumerate(s):
     print(idx, val)
