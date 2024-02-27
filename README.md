@@ -81,7 +81,6 @@ output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 + 리스트에서 문자만 골라내기 ( 4번 )
 
 ```python
-
 strs = [ 'A man, a plan, a canal: Panama']
 words = [word for word in re.sub(r'[^\W]', ' ',  strs) ]
 
@@ -91,7 +90,6 @@ words = [word for word in re.sub(r'[^\W]', ' ',  strs) ]
 ```
 
 ```python
-
 strs = 'A man, a plan, a canal: Panama'
 for s in strs:
     if s.isalnum():
@@ -110,7 +108,6 @@ banned = ['dog']
 words = [(word for word in strs if word not in banned ) ]
 
 >>> ['apple', 'cat2', 'apple', 'apple']
-
 ```
 
 
@@ -121,7 +118,6 @@ strs = ['apple', 'cat2', 'dog', 'apple', 'dog', 'apple']
 
 key = collections.Counter(strs).most_common(1)[0][0]
 count = collections.Counter(strs).most_common(1)[0][1]
-
 ```
 
 + enumerate()를 사용해서 인덱스와 값 동시에 사용하기 ( 7번 )
@@ -155,7 +151,6 @@ print(count['b']) # 특정 엘리멘트의 갯수
 print(count.most_common(1)) # 가장 많이 반복되는 것 1위 
 print(count.most_common(n=1))
 # [('d', 5)]
-
 ```
 + 리스트 컴프리헨션
 
