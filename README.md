@@ -151,11 +151,11 @@ print(count['b']) # 특정 엘리멘트의 갯수
 print(count.most_common(1)) # 가장 많이 반복되는 것 1위 
 print(count.most_common(n=1))
 # [('d', 5)]
+
 ```
 + 리스트 컴프리헨션
 
 ```python
-
 S = ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd']
 J = ['a', 'c']
     s for s in S
