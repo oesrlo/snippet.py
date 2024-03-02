@@ -154,7 +154,6 @@ print(count.most_common(n=1))
 
 ```
 + 리스트 컴프리헨션
-
 ```python
 S = ['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'd']
 J = ['a', 'c']
